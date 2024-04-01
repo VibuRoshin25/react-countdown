@@ -5,7 +5,7 @@ export default function Player() {
   const [enteredPlayerName, setEnteredPlayerName] = useState(null);
   return (
     <section id="player">
-      <h2>Welcome {enteredPlayerName ? enteredPlayerName : "Unkown Entity"}</h2>
+      <h2>Welcome {enteredPlayerName ?? "Unkown Entity"}</h2>
       <p>
         <input ref={playerName} type="text" />
         <button
