@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
 
 export default function Player() {
-  const playerName = useRef("unknown entity");
+  const playerName = useRef();
   const [enteredPlayerName, setEnteredPlayerName] = useState(null);
   return (
     <section id="player">
-      <h2>Welcome {enteredPlayerName ?? "Unkown Entity"}</h2>
+      <h2>Welcome {enteredPlayerName ? enteredPlayerName : "Unkown Entity"}</h2>
       <p>
         <input ref={playerName} type="text" />
         <button
